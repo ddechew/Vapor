@@ -1,0 +1,61 @@
+.likers-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .likers-modal {
+    background: #1e1e1e;
+    padding: 24px 28px;
+    border-radius: 12px;
+    max-height: 400px;
+    width: 300px;
+    overflow-y: auto;
+    box-shadow: 0 0 20px rgba(51, 153, 255, 0.2);
+    color: #eee;
+  }
+  
+  .likers-modal h4 {
+    margin-bottom: 16px;
+    color: #66aaff;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  .likers-modal ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .liker-entry {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 8px;
+    text-decoration: none;
+    color: #ddd;
+    border-bottom: 1px solid #333;
+    transition: background 0.2s ease;
+  }
+  
+  .liker-entry:hover {
+    background-color: #2a2a2a;
+    color: #66aaff;
+  }
+  
+  .liker-entry img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #3399ff;
+  }
+  

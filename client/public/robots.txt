@@ -1,0 +1,7 @@
+
+
+
+
+
+
+Scaffold-DbContext "Server=localhost;Database=VaporDB;Integrated Security=True;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -ContextDir Data -Context VaporDbContext -Force

@@ -1,0 +1,343 @@
+.app-details-container {
+  max-width: 1289px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background-color: #121212;  
+  border-radius: 10px;
+}
+
+.game-title {
+  font-size: 28px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #3399ff;
+  padding-bottom: 5px;
+}
+
+.game-content {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.media-section {
+  flex: 2;
+}
+
+.game-video,
+.game-image {
+  width: 100%;
+  height: 450px;
+  max-height: 450px; 
+  border-radius: 10px;
+  display: block;    
+}
+
+.game-info {
+  flex: 1;
+  background-color: rgba(30, 30, 30, 0.95);
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.review-summary-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  font-size: 16px;
+}
+
+.review-tag {
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background-color: #1e2a36;
+  font-size: 15px;
+  color: #66c0f4;
+  white-space: nowrap;
+}
+
+.review-count {
+  font-size: 14px;
+  color: #bbb;
+  margin-left: 2px;
+}
+
+
+.review-tag.mostly-positive {
+  color: #66c0f4;
+}
+
+.review-tag.mostly-negative {
+  color: #e35d6a;
+}
+
+.review-tag.neutral {
+  color: #aaa;
+}
+
+.section-divider {
+  border: none;
+  border-top: 2px solid #3399ff !important;
+  margin: 30px 0 10px 0;
+  width: 100%;  
+}
+
+.description-heading {
+  margin-top: 25px;
+  color: #66aaff;
+  font-size: 18px;
+}
+
+.back-to-base-button {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 12px;
+  background-color: #1b74e4;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.back-to-base-button:hover {
+  text-decoration: underline;
+  color: #3399ff;
+}
+
+.description-below {
+  margin-top: 15px;
+  font-size: 15px;
+  color: #ddd;
+  line-height: 1.5;
+  padding: 10px;
+  background-color: rgba(40, 40, 40, 0.95);
+  border-radius: 5px;
+}
+
+.cover-image {
+  width: 100%;
+  border-radius: 10px;
+  padding-bottom: 12px;
+}
+
+.review,
+.price {
+  color: #66c0f4;
+}
+
+.price {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.buy-button {
+  background-color: #3399ff;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none; 
+  width: 100%;
+  margin-top: 10px;
+}
+
+.buy-button.owned {
+  background-color: #444;
+  color: #aaa;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: default;
+  width: 100%;
+  text-align: center;
+  text-decoration: none; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buy-button:disabled {
+  background-color: #777 !important;
+  color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.buy-button:hover {
+  background-color: #d5ae30;
+}
+
+.buy-button:hover:not(:disabled) {
+  background-color: #2277cc;
+}
+
+.base-app-banner {
+  background-color: #1c1f24;
+  padding: 20px;
+  margin-top: 30px;
+  border-left: 5px solid #3399ff;
+  border-radius: 6px;
+  color: #ccc;
+}
+
+.back-button:hover {
+  color: #3399ff;
+  text-decoration: underline;
+}
+
+.back-to-base-button {
+  display: inline-block;
+  padding: 8px 14px;
+  margin-top: 8px;
+  background-color: #3399ff;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.back-to-base-button:hover {
+  text-decoration: underline;
+  color: #2277cc;
+}
+
+.cart-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;  
+}
+
+.cart-modal {
+  background-color: #1c1e22;
+  padding: 24px 28px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+  text-align: center;
+  color: white;
+  width: 350px;
+}
+
+.wishlist-button {
+  margin-top: 10px;
+  padding: 10px 16px;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+}
+
+.wishlist-button:hover {
+  background-color: #666;
+}
+
+.wishlist-button.disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+.modal-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+  flex-direction: row;
+}
+
+.modal-btn {
+  padding: 10px 25px;
+  background-color: #3399ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-btn:hover {
+  background-color: #2277cc;
+}
+
+.review-box {
+  background-color: #222;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.review-user {
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.recommended {
+  color: #4caf50;
+}
+
+.not-recommended {
+  color: #f44336;
+}
+
+.review-date {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 6px;
+}
+
+.submit-review-form {
+  margin-top: 20px;
+  background-color: #1a1a1a;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.submit-review-form textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  resize: vertical;
+  background-color: #2b2b2b;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.review-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.submit-review-btn {
+  padding: 6px 12px;
+  background-color: #66aaff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-review-btn:hover {
+  background-color: #5599dd;
+}
+
+

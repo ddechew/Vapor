@@ -1,0 +1,146 @@
+﻿@model VaporWebAPI.DTOs.PurchaseInvoiceModel
+@using System;
+@using System.Globalization;
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1b1f23;
+            color: #ffffff;
+            padding: 40px;
+        }
+
+        .email-container {
+            max-width: 700px;
+            margin: auto;
+            background-color: #2a2f36;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
+        }
+
+        h2 {
+            color: #66ff99;
+            font-size: 26px;
+            margin-bottom: 24px;
+        }
+
+        .app-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #444;
+        }
+
+        .app-image {
+            width: 200px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 6px;
+            flex-shrink: 0;
+        }
+
+        .app-name-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .app-name {
+            font-size: 16px;
+            font-weight: 500;
+            color: #f2f2f2;
+            padding-right: 16px;
+        }
+
+        .app-price {
+            font-size: 16px;
+            font-weight: bold;
+            color: #66ccff;
+            white-space: nowrap;
+            min-width: 70px;
+        }
+
+        .total-line {
+            margin-top: 30px;
+            font-size: 18px;
+            color: #ffcc66;
+            font-weight: bold;
+            text-align: right;
+        }
+
+        .footer {
+            font-size: 14px;
+            color: #bbbbbb;
+            margin-top: 48px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <h2>🧾 Thank you for your purchase, @Model.Username!</h2>
+
+        <p>Here is a summary of your order placed on <strong>@Model.PurchaseDate.ToString("MMMM dd, yyyy HH:mm", CultureInfo.InvariantCulture)</strong>:</p>
+
+        @foreach (var item in Model.Items)
+        {
+            <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 16px; border-bottom: 1px solid #444; padding-bottom: 12px;">
+                <tr>
+                    <td width="200" style="padding-right: 12px;">
+                        <img src="@item.HeaderImage" alt="@item.Name" style="width: 200px; height: 90px; object-fit: cover; border-radius: 6px; display: block;" />
+                    </td>
+                    <td style="font-size: 16px; color: #f2f2f2; font-weight: 500;">
+                        @item.Name
+                    </td>
+                    <td align="right" style="font-size: 16px; font-weight: bold; color: #66ccff; white-space: nowrap;">
+                        @if (item.OriginalPrice.HasValue && item.OriginalPrice.Value > item.PriceAtPurchase)
+                        {
+                            <del style="color: #aaa; margin-right: 6px;">@item.OriginalPrice.Value.ToString("0.00")€</del>
+                        }
+                        @item.PriceAtPurchase.ToString("0.00")€
+                    </td>
+                </tr>
+            </table>
+        }
+
+        @if (Model.OriginalTotal.HasValue && Model.OriginalTotal.Value > Model.TotalPrice)
+        {
+            <div class="total-line">
+                Total: <del>@Model.OriginalTotal.Value.ToString("0.00")€</del>
+                <span style="margin-left: 10px; color: #ffcc66;">@Model.TotalPrice.ToString("0.00")€</span>
+            </div>
+            @if (Model.DiscountPercent.HasValue)
+            {
+                <div style="text-align: right; color: #bbbbbb; font-size: 14px;">
+                    Discount applied: @Model.DiscountPercent.Value% off with points
+                </div>
+            }
+        }
+        else
+        {
+            <div class="total-line">
+                Total: @Model.TotalPrice.ToString("0.00")€
+            </div>
+        }
+
+
+        <p>We hope you enjoy your games. You can always access your purchases in your Vapor library.</p>
+
+        <p class="footer">
+            &copy; @DateTime.UtcNow.Year Vapor Inc. All rights reserved.
+        </p>
+    </div>
+</body>
+</html>

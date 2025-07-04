@@ -1,0 +1,52 @@
+.section-divider {
+    margin: 30px 0 15px 0;
+    border: none;
+    border-top: 2px solid #3399ff;
+    width: 100%;
+  }
+  
+  .description-heading {
+    color: #66aaff;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .dlc-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+  }
+  
+  .dlc-card {
+    width: 250px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid transparent;
+  }
+  
+  .dlc-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 10px rgba(51, 153, 255, 0.6);
+    border-color: #3399ff;
+  }
+  
+  .dlc-image {
+    width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    height: 100px;
+  }
+  
+  .dlc-title {
+    font-size: 14px;
+    margin-top: 8px;
+    color: #ddd;
+    font-weight: 500;
+  }
+  

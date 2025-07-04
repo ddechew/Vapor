@@ -1,0 +1,135 @@
+.library-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  color: #e3e3e3;
+  font-family: "Montserrat", sans-serif;
+}
+
+.library-game {
+  margin-bottom: 30px;
+  background-color: #1B1B1B;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.library-game:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 14px rgba(51, 153, 255, 0.3);
+}
+
+.library-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #66aaff;
+  text-decoration: none;
+}
+
+.library-title:hover {
+  color: #58b4ff;
+  text-decoration: underline;
+}
+
+.library-related {
+  margin-top: 20px;
+  padding-left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.related-app {
+  padding: 10px;
+  background-color: #222;
+  border-radius: 8px;
+  width: 280px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.related-app:hover {
+  transform: scale(1.03);
+}
+
+.related-app a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.related-app.owned {
+  border-left: 3px solid #28a745;
+}
+
+.related-app.not-owned {
+  opacity: 0.6;
+  border-left: 3px solid #d9534f;
+}
+
+.related-price {
+  display: block;
+  font-size: 13px;
+  color: #ccc;
+}
+
+.not-owned-text {
+  color: #f55;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.library-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #e3e3e3;
+}
+
+.library-thumb {
+  width: 150px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+
+.related-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.related-thumb {
+  width: 110px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #333;
+}
+
+.related-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.related-name {
+  font-weight: 600;
+  color: #e3e3e3;
+}
+
+.related-price {
+  color: #66aaff;
+  font-size: 14px;
+}

@@ -1,0 +1,122 @@
+.wishlist-page {
+  color: #eee;
+}
+
+.wishlist-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.wishlist-card {
+  display: flex;
+  background-color: #1f1f1f;
+  padding: 15px;
+  border-radius: 10px;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.wishlist-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 6px 14px rgba(51, 153, 255, 0.3);
+}
+
+
+.wishlist-image {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.wishlist-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.wishlist-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #66aaff;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.wishlist-price {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.wishlist-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+}
+
+.wishlist-controls button {
+  background-color: #444;
+  border: none;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 32px;
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wishlist-controls button:hover {
+  background-color: #666;
+}
+
+.priority-input {
+  -moz-appearance: textfield !important;      
+  -webkit-appearance: none !important;      
+  appearance: none !important;                 
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  width: 50px;
+  padding: 4px;
+  background-color: #2b2b2b;
+  color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.priority-input::-webkit-inner-spin-button,
+.priority-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.remove-button {
+  background-color: #aa3333;
+  color: white;
+  padding: 6px 16px; 
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  align-self: flex-start; 
+  margin-left: auto;
+  min-width: 80px;
+  text-align: center;
+}
+
+.remove-button:hover {
+  background-color: #cc4444;
+}
+
+
+
+

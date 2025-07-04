@@ -1,0 +1,46 @@
+.cropper-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.cropper {
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+.cropper-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.cropper-actions button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 4px;
+  background-color: #00c0ff;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.cropper-actions button:hover {
+  background-color: #009ccc;
+}
+
+.profile-preview {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}

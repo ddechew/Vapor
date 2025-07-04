@@ -1,0 +1,63 @@
+﻿@model VaporWebAPI.DTOs.EmailVerificationModel
+@using System;
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1b1f23;
+            color: #ffffff;
+            padding: 40px;
+        }
+
+        .email-container {
+            max-width: 640px;
+            margin: auto;
+            background-color: #2a2f36;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
+        }
+
+        h2 {
+            color: #66b2ff;
+            font-size: 26px;
+            margin-bottom: 24px;
+        }
+
+        p {
+            color: #f2f2f2;
+            font-size: 17px;
+            line-height: 1.8;
+            margin: 16px 0;
+        }
+
+        .footer {
+            font-size: 14px;
+            color: #bbbbbb;
+            margin-top: 48px;
+        }
+
+        a {
+            color: #66b2ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <h2>Username Changed ✏️</h2>
+
+        <p>Hi @Model.Username,</p>
+
+        <p>This is a confirmation that your username was successfully updated on your Vapor account.</p>
+
+        <p>If you did not perform this change, please contact our support team immediately.</p>
+
+        <p class="footer">
+            &copy; @DateTime.UtcNow.Year Vapor Inc. All rights reserved.
+        </p>
+    </div>
+</body>
+</html>

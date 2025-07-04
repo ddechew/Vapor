@@ -1,0 +1,151 @@
+.wallet-page {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 40px;
+  background-color: #1c1c1e;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  gap: 40px;
+  color: #eaeaea;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.wallet-main {
+  flex: 3;
+  max-width: 1000px;
+}
+
+.wallet-sidebar {
+  background-color: #2a2d3a;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  width: 350px;
+  height: 230px;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #66aaff;
+}
+
+.wallet-description {
+  font-size: 15px;
+  max-width: 600px;
+  margin-bottom: 30px;
+  color: #b0b8c1;
+}
+
+.wallet-options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.wallet-card {
+  background-color: #23252f;
+  border-radius: 10px;
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.wallet-card:hover {
+  transform: translateY(-2px);
+  border-color: #3399ff;
+  box-shadow: 0 0 10px rgba(51, 153, 255, 0.3);
+}
+
+.wallet-card-info h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #eaeaea;
+}
+
+.wallet-note {
+  font-size: 12px;
+  color: #888ea0;
+  margin-top: 4px;
+}
+
+.wallet-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.wallet-price {
+  background-color: #11121a;
+  color: #eaeaea;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.wallet-card-actions button {
+  background-color: #3399ff;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.wallet-card-actions button:hover {
+  background-color: #2277cc;
+}
+
+.wallet-sidebar h3 {
+  font-size: 16px;
+  color: #a6acb7;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.wallet-balance,
+.wallet-points {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.balance-amount {
+  font-weight: bold;
+  font-size: 18px;
+  color: #60c8ff;
+}
+
+.points-amount {
+  font-weight: bold;
+  font-size: 18px;
+  color: #66aaff;
+}
+
+.wallet-sidebar button {
+  background-color: #3399ff;
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  width: 100%;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.wallet-sidebar button:hover {
+  background-color: #2277cc;
+}

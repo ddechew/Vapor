@@ -1,0 +1,28 @@
+.admin-panel {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.admin-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.admin-tabs button {
+  padding: 10px 16px;
+  background: #1e1e1e;
+  color: #00c0ff;
+  border: 1px solid #00c0ff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.admin-tabs button.active,
+.admin-tabs button:hover {
+  background: #00c0ff;
+  color: #000;
+}

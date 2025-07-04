@@ -1,0 +1,77 @@
+﻿@model VaporWebAPI.DTOs.EmailChangeRequestModel
+@using System;
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1b1f23;
+            color: #ffffff;
+            padding: 40px;
+        }
+
+        .email-container {
+            max-width: 640px;
+            margin: auto;
+            background-color: #2a2f36;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
+        }
+
+        h2 {
+            color: #66b2ff;
+            font-size: 26px;
+            margin-bottom: 24px;
+        }
+
+        p {
+            color: #f2f2f2;
+            font-size: 17px;
+            line-height: 1.8;
+            margin: 16px 0;
+        }
+
+        .btn {
+            background-color: #66b2ff;
+            color: white !important;
+            padding: 14px 28px;
+            text-decoration: none;
+            border-radius: 8px;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 12px;
+        }
+
+        .footer {
+            font-size: 14px;
+            color: #bbbbbb;
+            margin-top: 48px;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <h2>Confirm Your Email Change Request</h2>
+
+        <p>Hi @Model.Username,</p>
+
+        <p>We received a request to change the email address linked to your Vapor account to:</p>
+
+        <p style="font-weight: bold; font-size: 18px; color: #66ffcc;">@Model.NewEmail</p>
+
+        <p>If this was you, please confirm the change by clicking below:</p>
+
+        <a href="@Model.Link" class="btn">Confirm Email Change</a>
+
+        <p>If you did <strong>not</strong> make this request, your account may be at risk. Please <strong>change your password</strong> and contact our support team immediately.</p>
+
+        <p class="footer">
+            &copy; @DateTime.UtcNow.Year Vapor Inc. All rights reserved.
+        </p>
+    </div>
+</body>
+</html>

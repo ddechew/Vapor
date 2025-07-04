@@ -1,0 +1,6 @@
+@VaporWebAPI_HostAddress = http://localhost:5093
+
+GET {{VaporWebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
