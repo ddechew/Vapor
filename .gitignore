@@ -407,9 +407,10 @@ appsettings.Production.json
 **/bin/
 **/obj/
 **/db-backup
-**/ssl
 
 # Ignore data files
 server/VaporWebAPI/appsettings_data.txt
 client/env_data.txt
+client/ssl/server.crt
+client/ssl/server.key
 TODO.txt
